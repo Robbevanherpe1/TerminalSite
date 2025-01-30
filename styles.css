@@ -1,65 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+/* Make body fill the window and allow scrolling if needed */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Center .main-container in the window horizontally & vertically */
 body {
-    background: black;
-    margin: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    transform-origin: top left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.background {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Fixed-size container to mimic a TN3270 layout */
+.main-container {
+  position: relative;
+  width: 1280px;  /* Fixed width of the 'terminal' */
+  height: 800px;  /* Fixed height */
+  background: black;
 }
 
+/* Background image locked to the container’s width/height */
 .bg-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 800px;
+  object-fit: cover;
+  z-index: 0;
 }
 
-/* Default: Full HD (1920x1080) */
+/* The “terminal screen” portion, positioned exactly on the “monitor” in the image */
 .screen-overlay {
-    position: absolute;
-    top: 37%;
-    left: 24%;
-    width: 50vw;
-    height: 28vh;
-    background: rgba(0, 0, 0, 0.9);
-    color: #33ff33;
-    font-family: 'VT323', monospace;
-    box-shadow: 0 0 10px #33ff33;
-    overflow: hidden;
-    padding: 15px;
+  position: absolute;
+  /* Adjust these to match where the 'screen' portion is on your background image */
+  top: 215px; 
+  left: 400px;
+  width: 350px;
+  height: 185px;
+  background: black;
+  color: #33ff33;
+  font-family: 'VT323', monospace;
+  box-shadow: 0 0 10px #33ff33;
+  overflow: hidden;
+  padding: 10px;
+  z-index: 1;
 }
 
+/* Terminal text area (scrollable if it overflows) */
 #terminal {
-    white-space: pre-wrap;
-    height: 100%;
-    overflow-y: auto;
-    font-size: 1.5vw;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  overflow-y: auto;
 }
 
-/* Digital Clock */
+/* Digital clock in a fixed position relative to .main-container */
 .clock-overlay {
-    position: absolute;
-    top: 14.5%;
-    left: 14.7%;
-    color: red;
-    font-size: 2.5vw;
-    font-family: 'VT323', monospace;
-    text-shadow: 0 0 5px red;
+  position: absolute;
+  top: 160px; 
+  left: 280px;
+  color: red;
+  font-size: 28px;
+  font-family: 'VT323', monospace;
+  text-shadow: 0 0 3px red;
+  z-index: 2;
 }
