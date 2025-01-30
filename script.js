@@ -32,6 +32,12 @@ function typeEffect(element, text, speed, callback) {
   typing()
 }
 
+function scrollToBottom() {
+  setTimeout(() => {
+    terminal.scrollTop = terminal.scrollHeight;
+  }, 10); // Delay to allow rendering
+}
+
 function boot() {
   terminal.innerHTML = ""
   let i = 0
@@ -56,12 +62,15 @@ document.addEventListener("keydown", function(event) {
     } else {
       terminal.innerHTML += "\nUnknown command. Type 'help' for a list of commands.\n>"
     }
-    event.preventDefault()
+    event.preventDefault();
+    scrollToBottom();
   } else if (event.key.length === 1) {
-    terminal.innerHTML += event.key
+    terminal.innerHTML += event.key;
+    scrollToBottom();
   } else if (event.key === "Backspace") {
     terminal.innerHTML = terminal.innerHTML.slice(0, -1)
-    event.preventDefault()
+    event.preventDefault();
+    scrollToBottom();
   }
 })
 
