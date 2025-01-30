@@ -55,6 +55,12 @@ body {
 }
 
 
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
 #terminal {
   width: 100%;
   height: 100%;
@@ -64,6 +70,7 @@ body {
   word-break: break-all;
   overflow-x: hidden;
   overflow-y: hidden;
+  animation: flicker 0.15s infinite alternate;
 }
 
 /* timer */
