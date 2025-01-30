@@ -6,7 +6,9 @@ const bootSequence = [
   "Mem check... 8192 of 8192 bytes OK",
   "Booting TN-32 Emulator...",
   "Loading system...",
-  "Ready.\n"
+  "Ready.",
+  "      \t\t\t(type LOGON)"
+
 ]
 
 function typeEffect(element, text, speed, callback) {
@@ -31,7 +33,7 @@ function boot() {
       typeEffect(terminal, bootSequence[i] + "\n", 50, nextLine)
       i++
     } else {
-      terminal.innerHTML += ">"
+      terminal.innerHTML += "Option ===>"
     }
   }
   nextLine()
