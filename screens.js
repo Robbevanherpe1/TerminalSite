@@ -33,7 +33,7 @@ function getStudiesScreen() {
 function getContactScreen() {
   return [
       "\n--------------------- CONTACT MENU ---------------------",
-      "1 Help",
+      "Linked-In : ",
       "2 Info\n"
   ].join("\n");
 }
