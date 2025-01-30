@@ -1,9 +1,10 @@
 
 screen_Main = [
+    "\n------------------- MAIN MENU --------------------",
     "\n0 Info      - Personal information",
     "1 Studies   - Info about my studies",
     "2 Contact   - My contact information",
-    "3 Help      - See list of commands\n"
+    "3 Help      - See list of commands\n\n"
     
 
 ]
@@ -12,6 +13,8 @@ screen_Help = [
     "1 help",
     "2 info"
 ]
+
+
 
 
 const commands = {
