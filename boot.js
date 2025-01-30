@@ -4,7 +4,7 @@ const clockDay = document.getElementById("day")
 
 const bootSequence = [
   "Mem check... 8192 of 8192 bytes OK",
-  "Booting TN-32 Emulator...",
+  "Booting TN3270 Emulator...",
   "Loading system...",
   "Ready.\n\n\n",
   "\t\t\t\t\t   (type LOGON)"
