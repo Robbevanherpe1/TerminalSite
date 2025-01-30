@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-/* Make body fill the window and allow scrolling if needed */
 html, body {
   margin: 0;
   padding: 0;
@@ -10,22 +9,19 @@ html, body {
   overflow: auto;
 }
 
-/* Center .main-container in the window horizontally & vertically */
 body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Fixed-size container to mimic a TN3270 layout */
 .main-container {
   position: relative;
-  width: 1280px;  /* Fixed width of the 'terminal' */
-  height: 800px;  /* Fixed height */
+  width: 1280px; 
+  height: 800px; 
   background: black;
 }
 
-/* Background image locked to the container’s width/height */
 .bg-image {
   position: absolute;
   top: 0;
@@ -36,24 +32,29 @@ body {
   z-index: 0;
 }
 
-/* The “terminal screen” portion, positioned exactly on the “monitor” in the image */
 .screen-overlay {
   position: absolute;
-  /* Adjust these to match where the 'screen' portion is on your background image */
-  top: 215px; 
+  top: 230px; 
   left: 400px;
   width: 350px;
-  height: 185px;
+  height: 175px;
   background: black;
-  color: #33ff33;
+  color: #FFBF00;
   font-family: 'VT323', monospace;
-  box-shadow: 0 0 10px #33ff33;
+  /*box-shadow: 0 0 10px #33ff33;*/
   overflow: hidden;
   padding: 10px;
   z-index: 1;
 }
 
-/* Terminal text area (scrollable if it overflows) */
+.screen-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.9) 100%);
+}
+
+
 #terminal {
   width: 100%;
   height: 100%;
@@ -63,11 +64,10 @@ body {
   overflow-y: auto;
 }
 
-/* Digital clock in a fixed position relative to .main-container */
 .clock-overlay {
   position: absolute;
-  top: 160px; 
-  left: 280px;
+  top: 380px; 
+  left: 130px;
   color: red;
   font-size: 28px;
   font-family: 'VT323', monospace;
