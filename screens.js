@@ -32,8 +32,9 @@ function getStudiesScreen() {
 function getContactScreen() {
   return `
   <br>--------------------- CONTACT MENU --------------------
-  Linked-In: <a href="https://www.linkedin.com/in/your-profile" target="_blank">Click Here</a>
-  2 Info
+  Linked-In: <a href="https://www.linkedin.com/in/robbevanherpe/" target="_blank">www.linkedin.com/in/robbevanherpe</a>
+  Email: <a href="mailto:robbe.van.herpe@outlook.com" target="_blank">robbe.van.herpe@outlook.com</a>
+  <br><br><br>
   `;
 }
 
