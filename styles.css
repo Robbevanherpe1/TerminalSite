@@ -66,10 +66,23 @@ body {
   overflow-y: hidden;
 }
 
-.clock-overlay {
+/* timer */
+
+.time-overlay {
   position: absolute;
   top: 380px; 
-  left: 130px;
+  left: 155px;
+  color: red;
+  font-size: 28px;
+  font-family: 'VT323', monospace;
+  text-shadow: 0 0 3px red;
+  z-index: 2;
+}
+
+.day-overlay {
+  position: absolute;
+  top: 380px; 
+  left: 100px;
   color: red;
   font-size: 28px;
   font-family: 'VT323', monospace;

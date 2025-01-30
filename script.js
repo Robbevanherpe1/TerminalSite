@@ -1,7 +1,7 @@
 const terminal = document.getElementById("terminal")
-const clock = document.getElementById("clock")
+const clockTime = document.getElementById("time")
+const clockDay = document.getElementById("day")
 
-// Simple commands
 const commands = {
   "help": "Available commands:\n- help\n- about\n- projects\n- contact",
   "about": "Hello, I'm [Your Name]. A developer passionate about retro interfaces!",
@@ -9,7 +9,6 @@ const commands = {
   "contact": "Email: your@email.com\nGitHub: github.com/yourprofile"
 }
 
-// Boot messages
 const bootSequence = [
   "Mem check... 8192 of 8192 bytes OK",
   "Booting TN-32 Emulator...",
@@ -17,7 +16,6 @@ const bootSequence = [
   "Ready.\n"
 ]
 
-// Typewriter effect for the boot text
 function typeEffect(element, text, speed, callback) {
   let i = 0
   function typing() {
@@ -35,7 +33,7 @@ function typeEffect(element, text, speed, callback) {
 function scrollToBottom() {
   setTimeout(() => {
     terminal.scrollTop = terminal.scrollHeight;
-  }, 10); // Delay to allow rendering
+  }, 10);
 }
 
 function boot() {
@@ -74,15 +72,17 @@ document.addEventListener("keydown", function(event) {
   }
 })
 
-// Update clock every second
 function updateClock() {
   const now = new Date()
   const hours = String(now.getHours()).padStart(2, "0")
   const minutes = String(now.getMinutes()).padStart(2, "0")
-  clock.textContent = `${hours}:${minutes}`
+  clockTime.textContent = `${hours}:${minutes}`
+
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const day = days[now.getDay()];
+  clockDay.textContent = `${day}`
 }
 setInterval(updateClock, 1000)
 updateClock()
 
-// Start the boot sequence
 boot()
