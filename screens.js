@@ -1,50 +1,51 @@
 
 function getMainScreen() {
   const currentTime = new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
-  return [
-      "\n--------------------- MAIN MENU ---------------------",
-      "\n0 Info      - Personal information          USERID RV1",
-      `1 Studies   - Info about my studies         TIME ${currentTime}`,
-      "2 Contact   - My contact information",
-      "3 Help      - See list of commands\n\n"
-  ].join("\n");
+  return `
+  <br>--------------------- MAIN MENU ---------------------
+  0 Info      - Personal information         USERID RV1
+  1 Studies   - Info about my studies        TIME ${currentTime}
+  2 Contact   - My contact information
+  3 Help      - See list of commands<br><br>
+  `;
 }
 
-
 function getInfoScreen() {
-  return [
-      "\n--------------------- INFO MENU ---------------------",
-      "1 Help",
-      "2 Info\n"
-  ].join("\n");
+  return `
+  <br>--------------------- INFO MENU ---------------------
+  1 Help
+  2 Info
+  `;
 }
 
 function getStudiesScreen() {
-  return [
-      "\n--------------------- STUDIES MENU --------------------",
-      "(University)",
-      "Hogent Bachelor's degree cs Mainframe expert",
-      "IMB Z student ambassador 24/25\n",
-      "(Highschool)",
-      "SMI Networking and IT\n"
-  ].join("\n");
+  return `
+  <br>--------------------- STUDIES MENU --------------------
+  (University)
+  Hogent Bachelor's degree CS - Mainframe Expert
+  IBM Z Student Ambassador 24/25<br>
+  (Highschool)
+  SMI Networking and IT
+  `;
 }
 
 function getContactScreen() {
-  return [
-      "\n--------------------- CONTACT MENU ---------------------",
-      "Linked-In : ",
-      "2 Info\n"
-  ].join("\n");
+  return `
+  <br>--------------------- CONTACT MENU --------------------
+  Linked-In: <a href="https://www.linkedin.com/in/your-profile" target="_blank">Click Here</a>
+  2 Info
+  `;
 }
 
 function getHelpScreen() {
-  return [
-      "\n--------------------- HELP MENU ---------------------",
-      "1 Help",
-      "2 Info\n"
-  ].join("\n");
+  return `
+  <br>--------------------- HELP MENU --------------------
+  1 Help
+  2 Info
+  `;
 }
+
+
 
 
 const commands = {
@@ -78,11 +79,11 @@ document.addEventListener("keydown", function (event) {
       const input = lastLine.replace("Option ===>", "").trim();
 
       if (commands[input]) {
-          terminal.innerHTML += "\n" + commands[input]() + "\nOption ===>";
+          terminal.innerHTML += "<br>" + commands[input]() + "<br>Option ===>";
       } else {
-          terminal.innerHTML += "\nUnknown command. Type 'Help' for a list of commands.\nOption ===>";
+          terminal.innerHTML += "<br>Unknown command. Type 'Help' for a list of commands.<br>Option ===>";
       }
-      
+
       event.preventDefault();
       scrollToBottom();
   } else if (event.key.length === 1) {
@@ -94,3 +95,4 @@ document.addEventListener("keydown", function (event) {
       scrollToBottom();
   }
 });
+
