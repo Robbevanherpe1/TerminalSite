@@ -7,7 +7,7 @@ const bootSequence = [
   "Booting TN-32 Emulator...",
   "Loading system...",
   "Ready.\n\n\n",
-  "  \t\t\t\t(type LOGON)"
+  "\t\t\t\t\t   (type LOGON)"
 
 ]
 
