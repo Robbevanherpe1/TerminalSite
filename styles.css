@@ -17,27 +17,27 @@ body {
 
 .main-container {
   position: relative;
-  width: 1280px; 
-  height: 800px; 
+  width: 1920px; 
+  height: 1080px; 
   background: black;
 }
 
 .bg-image {
-  position: absolute;
+  position: center;
   top: 0;
   left: 0;
-  width: 1280px;
-  height: 800px;
+  width: 1920px;
+  height: 1080px;
   object-fit: cover;
   z-index: 0;
 }
 
 .screen-overlay {
   position: absolute;
-  top: 230px; 
-  left: 400px;
-  width: 350px;
-  height: 175px;
+  top: 310px; 
+  left: 650px;
+  width: 415px;
+  height: 270px;
   background: black;
   color: #FFBF00;
   font-family: 'VT323', monospace;
@@ -77,8 +77,8 @@ body {
 
 .time-overlay {
   position: absolute;
-  top: 380px; 
-  left: 155px;
+  top: 523px; 
+  left: 340px;
   color: red;
   font-size: 28px;
   font-family: 'VT323', monospace;
@@ -88,8 +88,8 @@ body {
 
 .day-overlay {
   position: absolute;
-  top: 380px; 
-  left: 100px;
+  top: 524px; 
+  left: 230px;
   color: red;
   font-size: 28px;
   font-family: 'VT323', monospace;

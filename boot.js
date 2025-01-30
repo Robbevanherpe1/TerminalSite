@@ -6,8 +6,8 @@ const bootSequence = [
   "Mem check... 8192 of 8192 bytes OK",
   "Booting TN-32 Emulator...",
   "Loading system...",
-  "Ready.",
-  "      \t\t\t(type LOGON)"
+  "Ready.\n\n\n",
+  "  \t\t\t\t(type LOGON)"
 
 ]
 
