@@ -21,9 +21,12 @@ function getInfoScreen() {
 
 function getStudiesScreen() {
   return [
-      "\n--------------------- STUDIES MENU ---------------------",
-      "1 Help",
-      "2 Info\n"
+      "\n--------------------- STUDIES MENU --------------------",
+      "(University)",
+      "Hogent Bachelor's degree cs Mainframe expert",
+      "IMB Z student ambassador 24/25\n",
+      "(Highschool)",
+      "SMI Networking and IT\n"
   ].join("\n");
 }
 
