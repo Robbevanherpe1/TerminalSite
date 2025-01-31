@@ -38,7 +38,7 @@ The site is hosted on Vercel and is optimized for **modern browsers**. No additi
 ## 📬 Contact
 If you’d like to connect, feel free to reach out:
 - **Email**: [robbe.van.herpe@outlook.com]([mailto:robbe.van.herpe@outlook.com)
-- **LinkedIn**: [https://www.linkedin.com/in/robbevanherpe]([https://www.linkedin.com/in/robbevanherpe)
+- **LinkedIn**: [https://www.linkedin.com/in/robbevanherpe]([https://www.linkedin.com/in/robbevanherpe/)
 - **GitHub**: [https://github.com/Robbevanherpe1](https://github.com/Robbevanherpe1)
 
 Enjoy the experience, and happy hacking! 👨‍💻
