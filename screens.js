@@ -61,7 +61,7 @@ function getHelpScreen() {
   return `
   <br>--------------------- HELP MENU --------------------
   (Commands)
-  "Return" --> Go back to menu
+  "x" or "Menu" --> Go back to menu
   "0" or "Info" --> Gives and aboutme page  
   "1" or "Studies" --> Information about my studies 
   "2" or "Projects" --> Side Projects i have done
