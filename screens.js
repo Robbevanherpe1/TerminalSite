@@ -72,7 +72,8 @@ function getHelpScreen() {
 
 const commands = {
   "LOGON": () => getMainScreen(),
-  "Return": () => getMainScreen(),
+  "Menu": () => getMainScreen(),
+  "x": () => getMainScreen(),
 
   "0": () => getInfoScreen(),
   "Info": () => getInfoScreen(),
