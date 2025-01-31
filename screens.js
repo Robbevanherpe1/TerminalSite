@@ -5,16 +5,22 @@ function getMainScreen() {
   <br>--------------------- MAIN MENU ---------------------
   0 Info      - Personal information         USERID RV1
   1 Studies   - Info about my studies        TIME ${currentTime}
-  2 Contact   - My contact information
-  3 Help      - See list of commands<br><br>
+  2 Projects  - My side Projects
+  3 Contact   - My contact information
+  4 Help      - See list of commands<br>
   `;
 }
 
 function getInfoScreen() {
   return `
   <br>--------------------- INFO MENU ---------------------
-  1 Help
-  2 Info
+  Hi i'm Robbe,
+  a student at Hogent specializing in the Mainframe 
+  Expert program.
+
+  My focus is on programming in COBOL and PL/I, and
+  I'm passionate about building a career in the 
+  mainframe field.
   `;
 }
 
@@ -29,24 +35,39 @@ function getStudiesScreen() {
   `;
 }
 
+function getProjectScreen() {
+  return `
+  <br>--------------------- PROJECT MENU --------------------
+  AI & Data engineering project: <a href="https://github.com/Robbevanherpe1/DEP1-2023-2024-groep30" target="_blank">
+  https://github.com/Robbevanherpe1/DEP1-2023-2024
+  -groep30</a>
+  Indie game: <a href="https://github.com/Robbevanherpe1/Slime_World" target="_blank">
+  https://github.com/Robbevanherpe1/Slime_World</a>
+  pl/1 Learn site: <a href="https://github.com/Robbevanherpe1/pl1-learn" target="_blank">
+  https://github.com/Robbevanherpe1/pl1-learn</a>
+  `;
+}
+
 function getContactScreen() {
   return `
   <br>--------------------- CONTACT MENU --------------------
   Linked-In: <a href="https://www.linkedin.com/in/robbevanherpe/" target="_blank">www.linkedin.com/in/robbevanherpe</a>
   Email: <a href="mailto:robbe.van.herpe@outlook.com" target="_blank">robbe.van.herpe@outlook.com</a>
-  <br><br><br>
+  <br><br>
   `;
 }
 
 function getHelpScreen() {
   return `
   <br>--------------------- HELP MENU --------------------
-  1 Help
-  2 Info
+  (Commands)
+  "Return" --> Go back to menu
+  "0" or "Info" --> Gives and aboutme page  
+  "1" or "Studies" --> Information about my studies 
+  "2" or "Projects" --> Side Projects i have done
+  "3" or "Contact" --> Gives this overview
   `;
 }
-
-
 
 
 const commands = {
@@ -59,10 +80,13 @@ const commands = {
   "1": () => getStudiesScreen(),
   "Studies": () => getStudiesScreen(),
 
-  "2": () => getContactScreen(),
+  "2": () => getProjectScreen(),
+  "Projects": () => getProjectScreen(),
+
+  "3": () => getContactScreen(),
   "Contact": () => getContactScreen(),
 
-  "3": () => getHelpScreen(),
+  "4": () => getHelpScreen(),
   "Help": () => getHelpScreen()
 };
 
