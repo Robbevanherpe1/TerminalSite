@@ -69,6 +69,27 @@ function getHelpScreen() {
   `;
 }
 
+function getEasterEggScreen() {
+  return `
+  <br>------------------ EASTER EGG ------------------
+   Oh, you found this? You must be quite the curious    one!
+   Here’s a secret: Every great coder started by poking  around where they shouldn't. Keep going!
+  <br>Now, since you're here... try typing "fortune" for a   little surprise. 
+  `;
+}
+
+function getFortuneScreen() {
+  const fortunes = [
+    "You will debug a tricky bug today and feel like\ta wizard.",
+    "Code fast, commit often, and push your dreams\tforward!",
+    "Beware of semicolons and missing brackets...",
+    "A new COBOL feature will blow your mind soon",
+    "Someone is secretly impressed by your coding\tskills."
+  ];
+  return `<br><br><br><br><br><br>🔮${fortunes[Math.floor(Math.random() * fortunes.length)]}🔮<br><br><br>`;
+}
+
+
 
 const commands = {
   "LOGON": () => getMainScreen(),
@@ -87,8 +108,12 @@ const commands = {
   "3": () => getContactScreen(),
   "Contact": () => getContactScreen(),
 
-  "4": () => getHelpScreen(),
-  "Help": () => getHelpScreen()
+  "Help": () => getHelpScreen(),
+
+  "Help": () => getHelpScreen(),
+
+  "0123": () => getEasterEggScreen(),
+  "fortune": () => getFortuneScreen()
 };
 
 
