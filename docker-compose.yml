@@ -1,0 +1,6 @@
+version: '3'
+services:
+  tn3270-portfolio:
+    build: .
+    ports:
+      - "80:80"
