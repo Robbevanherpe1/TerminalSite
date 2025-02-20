@@ -3,4 +3,4 @@ services:
   tn3270-portfolio:
     build: .
     ports:
-      - "80:80"
+      - "3001:3001"
