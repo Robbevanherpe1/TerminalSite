@@ -16,11 +16,11 @@ function getInfoScreen() {
   <br>--------------------- INFO MENU ---------------------
   Hi i'm Robbe,
   a student at Hogent specializing in the Mainframe 
-  Expert program.
+  Expert program with hands-on experience
+  in PL/I development,JCL, REXX, Db2, and VSAM.
 
-  My focus is on programming in COBOL and PL/I, and
-  I'm passionate about building a career in the 
-  mainframe field.
+  Skilled in advocacy, event organization, 
+  community leadership, and peer engagement. 
   `;
 }
 
@@ -29,7 +29,7 @@ function getStudiesScreen() {
   <br>--------------------- STUDIES MENU --------------------
   (University)
   Hogent Bachelor's degree CS - Mainframe Expert
-  IBM Z Student Ambassador 24/25<br>
+  IBM Z Student Ambassador 24/25 - 25/26<br>
   (Highschool)
   SMI Networking and IT
   `;
@@ -92,25 +92,24 @@ function getFortuneScreen() {
 
 
 const commands = {
-  "LOGON": () => getMainScreen(),
-  "Menu": () => getMainScreen(),
+  "logon": () => getMainScreen(),
+  "menu": () => getMainScreen(),
   "x": () => getMainScreen(),
+  "return": () => getMainScreen(),
 
   "0": () => getInfoScreen(),
-  "Info": () => getInfoScreen(),
+  "info": () => getInfoScreen(),
 
   "1": () => getStudiesScreen(),
-  "Studies": () => getStudiesScreen(),
+  "studies": () => getStudiesScreen(),
 
   "2": () => getProjectScreen(),
-  "Projects": () => getProjectScreen(),
+  "projects": () => getProjectScreen(),
 
   "3": () => getContactScreen(),
-  "Contact": () => getContactScreen(),
+  "contact": () => getContactScreen(),
 
-  "Help": () => getHelpScreen(),
-
-  "Help": () => getHelpScreen(),
+  "help": () => getHelpScreen(),
 
   "0123": () => getEasterEggScreen(),
   "fortune": () => getFortuneScreen()
@@ -127,7 +126,7 @@ document.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
       const lines = terminal.innerText.split("\n");
       const lastLine = lines[lines.length - 1];
-      const input = lastLine.replace("Option ===>", "").trim();
+      const input = lastLine.replace("Option ===>", "").trim().toLowerCase();
 
       if (commands[input]) {
           terminal.innerHTML += "<br>" + commands[input]() + "<br>Option ===>";
